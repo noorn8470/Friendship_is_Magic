@@ -1,0 +1,143 @@
+/* Common styles for the entire page */
+body {
+    font-family: 'Comic Sans MS', cursive; /* Sets the default font for the page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #DCCBE6; /* Sets a light purple background color */
+    font-weight: bold; /* Makes all text bold by default */
+  }
+  
+  /* Styles for the common top banner */
+  .top-banner {
+    background-color: #aef3ed; /* Light teal background for the top banner */
+    padding: 1em; /* Adds padding around the content inside the banner */
+    text-align: center; /* Centers text inside the banner */
+    position: relative; /* Used for positioning the banner relative to other elements */
+    z-index: 1; /* Sets the stack order, ensuring the banner is above other elements */
+  }
+  
+  h1 {
+    margin: 0; /* Removes default margin from h1 elements */
+    font-size: 2em; /* Sets the font size to twice the default size */
+    color: black; /* Sets the text color to black */
+    font-family: 'Comic Sans MS', cursive; /* Overrides the default font for h1 */
+  }
+  
+  h2 {
+    font-size: 2em; /* Sets the font size to twice the default size for h2 elements */
+    font-family: 'Comic Sans MS', cursive; /* Overrides the default font for h2 */
+    font-weight: bold; /* Ensures h2 text is bold */
+  }
+  
+  /* Styles for the hamburger icon (typically used for menus) */
+  .menu-icon {
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks child elements vertically */
+    cursor: pointer; /* Changes the cursor to indicate clickable items */
+  }
+  
+  .bar {
+    width: 30px; /* Sets the width of each bar in the icon */
+    height: 3px; /* Sets the height of each bar */
+    background-color: black; /* Sets the color of the bars to black */
+    margin: 6px 0; /* Adds vertical space between bars */
+  }
+  
+  /* Styles for the dropdown menu */
+  .dropdown-content {
+    display: none; /* Hides the dropdown by default */
+    position: absolute; /* Positions the dropdown absolutely within a relative container */
+    background-color: #f9f9f9; /* Light gray background for dropdown items */
+    min-width: 160px; /* Minimum width for dropdown items */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    z-index: 1; /* Ensures the dropdown is above other elements */
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px; /* Adds padding inside each link */
+    display: block; /* Makes each link fill the available horizontal space */
+    text-decoration: none; /* Removes the default underline from links */
+    color: black; /* Sets the text color to black */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1; /* Changes background color on hover for visual feedback */
+  }
+  
+  /* Styles for the home icon */
+  .home-icon {
+    position: absolute; /* Positions the home icon absolutely within a relative container */
+    top: 0; /* Positions the icon at the top of its container */
+    right: 0; /* Positions the icon to the right within its container */
+    padding: 10px; /* Adds padding around the icon */
+    font-size: 1.5em; /* Enlarges the icon */
+    text-decoration: none; /* Removes default styling from the link */
+    color: transparent; /* Makes the text color transparent */
+    overflow: hidden; /* Prevents content from spilling outside its box */
+  }
+  
+  .home-icon::before {
+    content: '🏠'; /* Inserts a house emoji as content before the element */
+    display: block; /* Ensures the emoji is on its own line */
+    position: absolute; /* Positions the emoji absolutely within the link */
+    top: 0; /* Aligns the top of the emoji with its container */
+    left: 0; /* Aligns the left of the emoji with its container */
+    width: 100%; /* Ensures the emoji spans the full width of its container */
+    height: 100%; /* Ensures the emoji spans the full height of its container */
+    color: black; /* Sets the emoji color to black */
+    filter: brightness(0); /* Adjusts the brightness to create a silhouette effect */
+  }
+  
+  /* Styles for the main content container */
+  .container {
+    max-width: 40em; /* Limits the maximum width to 40 em units */
+    margin: 2em auto; /* Centers the container with equal top and bottom margins */
+    background-color: #DCCBE6; /* Sets the background color to match the body */
+    border: 20px solid #DCCBE6; /* Adds a thick border with the same color as the background */
+    border-radius: 1em; /* Rounds the corners of the container */
+    padding: 20px; /* Adds padding inside the container */
+    position: relative; /* Used for positioning elements inside it */
+    z-index: 0; /* Sets the stack order to ensure it's below the top banner */
+  }
+  
+  /* Styles specific to content boxes and forms */
+  .content-box {
+    text-align: center; /* Centers text inside the content box */
+    border: 20px solid #566dd6; /* Adds a thick blue border */
+    padding: 1em; /* Adds padding inside the content box */
+    background-color: #a6b7e2; /* Light blue background color */
+    font-weight: bold; /* Makes text bold inside the content box */
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+  }
+  
+  form {
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks form elements vertically */
+    align-items: center; /* Centers form elements horizontally */
+    width: 100%; /* Form takes up the full width of its container */
+    box-sizing: border-box; /* Width and height calculations include padding and borders */
+  }
+  
+  /* Styles for form elements */
+  .form-group {
+    margin: 0.5em 0; /* Adds vertical space between form groups */
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks elements vertically within the form group */
+    align-items: flex-start; /* Aligns elements to the start of the flex container */
+    position: relative; /* Used for positioning elements inside it */
+  }
+  
+  label {
+    font-size: 1.2em; /* Increases the font size of labels */
+    font-family: 'Comic Sans MS', cursive; /* Sets the font for labels */
+    color: black; /* Sets label text color to black */
+    font-weight: bold; /* Makes label text bold */
+  }
+  
+  .input {
+    width: 100%; /* Input field takes up the full width of its container */
+    padding: 0.5em 1em; /* Adds padding inside the input field */
+   
+  
