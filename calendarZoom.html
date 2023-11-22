@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character encoding and viewport for responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set the title of the page -->
+  <title>Your Calendar</title>
+  <!-- Link to an external stylesheet for styling -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+ 
+</head>
+
+<body>
+  <!-- Common top banner for the page -->
+  <div class="top-banner">
+    <!-- Hamburger icon for the dropdown menu -->
+    <div class="menu-icon" onclick="toggleDropdown()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Dropdown menu content -->
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="index.html">Sign-Out</a>
+      <!-- Add more links as needed -->
+    </div>
+
+    <!--Home Button-->
+    <a href="groups.html" class="home-icon">🏠</a>
+
+
+    <h1>Friendship is Magic!</h1>
+  </div>
+
+  <!--Empty calendar container----------------------------------->
+  <div class="image-container">
+    <!-- Add comments for easy customization -->
+    <!-- You can replace the following comment with an actual image tag when adding an image -->
+    <!-- <img src="your-image.jpg" alt="Your Image"> -->
+  </div>
+
+  <!--------------------------------------------------------------->
+
+  <!--remove this code below to remove calendar-->
+
+  <div class="container">
+    <div class="content">
+      <!-- Content specific to the page -->
+      <div class="content-box">
+        <!-- Updated heading to "Your Calendar" -->
+        <h2>Your Calendar</h2>
+        <!-- Include the calendar element -->
+        <div id='calendar'></div>
+      </div>
+
+      <!-- Button to begin matching -->
+      <button id="beginMatchingButton">Begin Matching</button>
+      <!--Style here in case we delete this button-->
+      <style>
+        /* Add the following CSS for centering the button */
+        #beginMatchingButton {
+          display: block;
+          margin: 0 auto;
+          margin-top: 20px;
+          /* Adjust the top margin as needed */
+        }
+      </style>
+      <!-- Calendar code end -->
+
+    </div>
+  </div>
+
+  <!-- Include an external JavaScript file -->
+  <script src="script.js"></script>
+  <!-- Include FullCalendar script -->
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
+  <script>
+    //the following code is all in here because it sounds like we may add an image for this page instead of this calendar feature
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth'
+      });
+      calendar.render();
+    });
+
+    //events for calendar
+    document.addEventListener('DOMContentLoaded', function () {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        events: [
+          {
+            title: 'Walk My Dog',
+            start: '2023-11-15', // Replace with the actual date of the event
+            url: 'calendarView.html' // Link to the HTML file
+          },
+          // Add more events as needed
+        ],
+        eventClick: function (info) {
+          if (info.event.url) {
+            window.location.href = info.event.url;
+          }
+        }
+      });
+
+      calendar.render();
+    });
+
+    // Event listener for "Begin Matching" button
+    document.addEventListener("DOMContentLoaded", function () {
+      const beginMatchingButton = document.getElementById("beginMatchingButton");
+
+      beginMatchingButton.addEventListener("click", function () {
+        // Display an alert when the button is clicked
+        alert("Matching initiated");
+      });
+    });
+
+  </script>
+  <!--calendar script end-->
+
+
+</body>
+
+</html>

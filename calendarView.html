@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character set and viewport for better rendering -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Set the title of the page -->
+  <title>Your Page Title</title>
+  <!-- Link to external stylesheet for styling -->
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <!-- Common top banner for the page -->
+  <div class="top-banner">
+    <!-- Hamburger icon for the dropdown menu -->
+    <div class="menu-icon" onclick="toggleDropdown()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Dropdown menu content -->
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="index.html">Sign-Out</a>
+      <!-- Add more links as needed -->
+    </div>
+
+    <!--Home Button-->
+     <a href="groups.html" class="home-icon">🏠</a>
+
+
+    
+    <h1>Friendship is Magic!</h1>
+  </div>
+
+  <!-- Main content container -->
+  <div class="container">
+    <!-- Section for displaying the selected year -->
+    <div class="selectedYear">
+      <!-- Empty container with a class name 'empty-container' -->
+      <div class="empty-container"></div>
+      <!-- Inner divider with a paragraph indicating the selected activity -->
+      <div class="inner-divider">
+        <p>Selected Activity</p>
+      </div>
+    </div>
+
+    <!-- Section for displaying details of the selected activity -->
+    <div class="selectedDetails">
+      <!-- Header row containing navigation buttons and the selected date -->
+      <div class="header-row">
+        <!-- Button to navigate to the previous date -->
+        <div class="header-button">&lt;</div>
+        <!-- Display the selected date -->
+        <div class="header-text">11/15/23</div>
+        <!-- Button to navigate to the next date -->
+        <div class="header-button">&gt;</div>
+      </div>
+
+      <!-- Container for activity information -->
+      <div class="info-container">
+        <!-- Stack of information with labels and corresponding details -->
+        <div class="info-stack">
+          <span>Start Time:</span>
+          <span>6pm</span>
+          <span>End Time:</span>
+          <span>7pm</span>
+        </div>
+        <!-- Stack of information with the title of the activity -->
+        <div class="info-stack">
+          <span>Title: Walk my Dog</span>
+        </div>
+        <!-- Stack of information with the location of the activity in blue -->
+        <div class="info-stack">
+          <span>Location: <span style="color: blue;">Lake Balboa Park</span></span>
+        </div>
+        <!-- Stack of information with the description of the activity -->
+        <div class="info-stack">
+          <span>Description: Weekly Park Day</span>
+        </div>
+      </div>
+
+      <!-- Buttons for adding and deleting activities -->
+      <div class="buttons">
+        <button class="add-activity">+ Add Activity</button>
+        <button class="delete-activity">Delete Activity</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include external JavaScript file for dynamic behavior -->
+  <script src="script.js"></script>
+</body>
+
+</html>
